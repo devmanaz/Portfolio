@@ -1,9 +1,26 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer base {
   body {
-    @apply bg-[#050505] text-white;
+    @apply bg-[#050505] text-white cursor-none;
+    font-family: 'Outfit', sans-serif;
   }
+
+  .font-mono {
+    font-family: 'Share Tech Mono', monospace;
+  }
+}
+
+a,
+button,
+input,
+textarea,
+select {
+  cursor: none !important;
 }
 
 :root {

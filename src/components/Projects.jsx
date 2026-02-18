@@ -1,65 +1,86 @@
 import { motion } from 'framer-motion'
-import { Github, ExternalLink, Box } from 'lucide-react'
+import { ExternalLink, Code2 } from 'lucide-react'
 
 const Projects = ({ mode }) => {
     const projects = [
         {
-            title: 'Scenario-Driven Containerized Sandbox',
-            desc: 'A robust, isolated environment for running and testing code scenarios in real-time. Built with scalability and security in mind.',
-            stack: ['Node.js', 'React', 'Express.js', 'Docker'],
-            image: 'https://images.unsplash.com/photo-1605379399642-870262d3d051?auto=format&fit=crop&q=80&w=1200',
-            github: '#',
-            demo: '#'
+            title: 'Eventique',
+            desc: 'A digital platform streamlines event management, automating processes, enhancing efficiency, boosting attendance, and ensuring accuracy.',
+            status: 'Ongoing',
+            image: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=800',
+            live: '#',
+            code: '#'
+        },
+        {
+            title: 'MunchMate',
+            desc: 'A canteen app to reduce waiting queues, allowing customers to pre-book meals for faster service and efficiency.',
+            status: 'Ongoing',
+            image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=800',
+            live: '#',
+            code: '#'
         }
     ]
 
     return (
-        <section id="projects" className="space-y-12">
-            <div className="flex justify-between items-end">
-                <h3 className="text-3xl font-bold">Featured <span className="text-accent-cyan">Creations</span></h3>
-                <a href="#" className="text-accent-cyan hover:underline font-mono">View all projects {`->`}</a>
+        <section id="projects" className="space-y-12 scroll-mt-32">
+            <div className="mb-12">
+                <motion.h3
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: false }}
+                    className="text-2xl md:text-3xl font-bold font-mono tracking-wider"
+                >
+                    My Works
+                </motion.h3>
             </div>
 
-            <div className="grid grid-cols-1 gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {projects.map((project, index) => (
                     <motion.div
                         key={project.title}
-                        className="group grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{
+                            duration: 0.8,
+                            delay: index * 0.1,
+                            ease: [0.215, 0.61, 0.355, 1]
+                        }}
+                        viewport={{ once: false, margin: "-50px" }}
+                        className="flex flex-col bg-[#0a1118] border border-white/5 rounded-[2rem] p-6 hover:border-accent-cyan/30 transition-all group"
                     >
-                        <div className="relative aspect-video rounded-3xl overflow-hidden border border-white/10 group-hover:border-accent-cyan/50 transition-colors">
+                        <h4 className="text-xl font-bold mb-4">{project.title}</h4>
+
+                        <div className="aspect-[4/3] rounded-2xl overflow-hidden mb-6 bg-dark/50">
                             <img
                                 src={project.image}
                                 alt={project.title}
-                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent flex items-end p-8">
-                                <div className="flex gap-4">
-                                    <Box className="text-accent-cyan" />
-                                    <span className="font-mono text-xs uppercase tracking-widest text-white/50">Technical Project</span>
-                                </div>
-                            </div>
                         </div>
 
-                        <div className="space-y-6">
-                            <h4 className="text-3xl font-bold group-hover:text-accent-cyan transition-colors">{project.title}</h4>
-                            <p className="text-gray-400 text-lg leading-relaxed">
+                        <div className="flex-1 space-y-4">
+                            <p className="text-gray-400 text-sm leading-relaxed min-h-[4rem]">
                                 {project.desc}
                             </p>
-                            <div className="flex flex-wrap gap-3">
-                                {project.stack.map(tech => (
-                                    <span key={tech} className="bg-white/5 border border-white/10 px-4 py-1 rounded-full text-xs font-mono text-gray-400">
-                                        {tech}
-                                    </span>
-                                ))}
-                            </div>
-                            <div className="flex gap-6 pt-4">
-                                <a href={project.github} className="flex items-center gap-2 text-white hover:text-accent-cyan transition-colors">
-                                    <Github size={20} />
-                                    <span>Codebase</span>
+
+                            {project.status && (
+                                <p className="text-white text-sm font-semibold">
+                                    Status : <span className="font-normal text-gray-500">{project.status}</span>
+                                </p>
+                            )}
+
+                            <div className="flex gap-3 pt-2">
+                                <a
+                                    href={project.live}
+                                    className="flex-1 py-2 px-4 border border-accent-cyan/50 text-white rounded-xl text-center text-sm font-medium hover:bg-accent-cyan hover:text-black transition-all"
+                                >
+                                    Live
                                 </a>
-                                <a href={project.demo} className="flex items-center gap-2 text-white hover:text-accent-cyan transition-colors">
-                                    <ExternalLink size={20} />
-                                    <span>Live Sandbox</span>
+                                <a
+                                    href={project.code}
+                                    className="flex-1 py-2 px-4 border border-accent-cyan/50 text-white rounded-xl text-center text-sm font-medium hover:bg-accent-cyan hover:text-black transition-all"
+                                >
+                                    Code
                                 </a>
                             </div>
                         </div>

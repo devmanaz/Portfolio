@@ -1,56 +1,71 @@
 import { motion } from 'framer-motion'
 
-const Experience = ({ mode }) => {
+const Experience = () => {
     const experiences = [
         {
             role: 'Community Director',
             company: 'BRIK (NGO)',
             period: '2023 - Present',
             desc: 'Leading community initiatives and events. Mentoring students and driving creative outreach programs.',
-            impact: '500+ students impacted'
         },
         {
             role: 'Digital Marketing Intern',
             company: 'Roldant Globalz',
             period: '2023',
             desc: 'Developed social media strategies and managed content creation for global clients.',
-            impact: '20% growth in engagement'
+        },
+        {
+            role: 'IEEE Media Lead',
+            company: 'IEEE Student Branch',
+            period: '2023 - 2024',
+            desc: 'Orchestrating visual storytelling and branding for major tech summits. Managing a team of 10+ creatives.',
+        },
+        {
+            role: 'NSS Volunteer Secretary',
+            company: 'National Service Scheme',
+            period: '2022 - 2024',
+            desc: 'Coordinating community service projects and social impact initiatives. Leading student volunteer teams.',
         }
     ]
 
     return (
-        <section id="experience" className="space-y-12">
-            <h3 className="text-3xl font-bold">Professional <span className="text-accent-purple">Journey</span></h3>
-            <div className="space-y-8 relative before:absolute before:left-[11px] before:top-2 before:bottom-2 before:w-[2px] before:bg-white/10">
+        <section id="experience" className="space-y-10 scroll-mt-32 pt-10">
+            <div className="mb-10">
+                <motion.h3
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: false }}
+                    className="text-2xl md:text-3xl font-bold font-mono tracking-wider"
+                >
+                    Experience
+                </motion.h3>
+            </div>
+
+            <div className="space-y-10">
                 {experiences.map((exp, index) => (
                     <motion.div
-                        key={exp.company}
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        className="flex gap-8 group"
+                        key={index}
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: false, margin: "-50px" }}
+                        transition={{
+                            duration: 0.8,
+                            delay: index * 0.1,
+                            ease: [0.215, 0.61, 0.355, 1]
+                        }}
+                        className="space-y-6 group cursor-default"
                     >
-                        <div className="relative z-10">
-                            <div className="w-6 h-6 rounded-full bg-accent-purple outline outline-8 outline-dark group-hover:scale-125 transition-transform" />
+                        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-sm md:text-base font-mono border-b border-white/20 pb-4 transition-all duration-300 group-hover:border-white/40">
+                            <span className="w-48 text-gray-400 group-hover:text-white transition-all duration-300">{exp.period}</span>
+                            <span className="flex-1 text-white uppercase tracking-wider group-hover:font-bold transition-all duration-300">{exp.role}</span>
+                            <span className="text-gray-400 uppercase tracking-widest flex items-center gap-2 group-hover:text-white transition-all duration-300">
+                                <span className="h-4 w-[1px] bg-white/20 hidden md:block group-hover:bg-white/40"></span>
+                                {exp.company}
+                            </span>
                         </div>
-                        <div className="bg-white/5 border border-white/10 p-8 rounded-3xl flex-1 hover:border-accent-purple/50 transition-colors">
-                            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
-                                <div>
-                                    <h4 className="text-2xl font-bold">{exp.role}</h4>
-                                    <p className="text-accent-purple font-mono">{exp.company}</p>
-                                </div>
-                                <span className="text-gray-500 bg-white/5 px-4 py-1 rounded-full text-sm">
-                                    {exp.period}
-                                </span>
-                            </div>
-                            <p className="text-gray-400 mb-6 leading-relaxed">
-                                {exp.desc}
-                            </p>
-                            <div className="flex items-center gap-2 text-sm text-accent-neon font-bold">
-                                <span className="w-2 h-2 rounded-full bg-accent-neon animate-pulse" />
-                                {exp.impact}
-                            </div>
-                        </div>
+                        <p className="text-base md:text-lg leading-relaxed max-w-5xl text-gray-400 group-hover:text-white/90 transition-all duration-300">
+                            {exp.desc}
+                        </p>
                     </motion.div>
                 ))}
             </div>

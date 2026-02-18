@@ -19,12 +19,29 @@ const Skills = ({ mode }) => {
     const skills = mode === 'dev' ? devSkills : creativeSkills
 
     return (
-        <section id="skills" className="space-y-8">
-            <h3 className="text-3xl font-bold mb-8">Technical & Creative <span className="text-accent-cyan">Toolbox</span></h3>
+        <section id="skills" className="space-y-12 scroll-mt-32">
+            <div className="mb-12">
+                <motion.h3
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: false }}
+                    className="text-2xl md:text-3xl font-bold font-mono tracking-wider"
+                >
+                    Toolbox
+                </motion.h3>
+            </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[120px]">
                 {skills.map((skill, index) => (
                     <motion.div
                         key={skill.title}
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: false, margin: "-50px" }}
+                        transition={{
+                            duration: 0.8,
+                            delay: index * 0.1,
+                            ease: [0.215, 0.61, 0.355, 1]
+                        }}
                         whileHover={{ scale: 1.02 }}
                         className={`bg-white/5 border border-white/10 rounded-3xl p-6 flex flex-col justify-between hover:bg-white/10 transition-colors ${skill.size}`}
                     >
