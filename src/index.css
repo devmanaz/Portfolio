@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-[#050505] text-white;
+  }
+}
+
+:root {
+  color-scheme: dark;
+}
+
+@theme {
+  --color-dark: #050505;
+  --color-accent-cyan: #00f3ff;
+  --color-accent-purple: #bc13fe;
+  --color-accent-neon: #39ff14;
+}
