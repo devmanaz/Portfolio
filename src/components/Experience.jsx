@@ -3,16 +3,22 @@ import { motion } from 'framer-motion'
 const Experience = () => {
     const experiences = [
         {
+            role: 'Chairperson',
+            company: 'IEEE Computer Society RSET SBC',
+            period: '2026 - Present',
+            desc: 'Directed an executive committee of 40 members, overseeing all strategic planning, event execution, and member relations',
+        },
+        {
             role: 'Community Director',
             company: 'BRIK (NGO)',
             period: '2023 - Present',
             desc: 'Leading community initiatives and events. Mentoring students and driving creative outreach programs.',
         },
         {
-            role: 'Digital Marketing Intern',
-            company: 'Roldant Globalz',
-            period: '2023',
-            desc: 'Developed social media strategies and managed content creation for global clients.',
+            role: 'NSS Volunteer Secretary',
+            company: 'National Service Scheme',
+            period: '2022 - 2024',
+            desc: 'Coordinating community service projects and social impact initiatives. Leading student volunteer teams.',
         },
         {
             role: 'IEEE Media Lead',
@@ -21,11 +27,12 @@ const Experience = () => {
             desc: 'Orchestrating visual storytelling and branding for major tech summits. Managing a team of 10+ creatives.',
         },
         {
-            role: 'NSS Volunteer Secretary',
-            company: 'National Service Scheme',
-            period: '2022 - 2024',
-            desc: 'Coordinating community service projects and social impact initiatives. Leading student volunteer teams.',
+            role: 'Digital Marketing Intern',
+            company: 'Roldant Globalz',
+            period: '2023',
+            desc: 'Developed social media strategies and managed content creation for global clients.',
         }
+        
     ]
 
     return (
