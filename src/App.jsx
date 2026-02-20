@@ -36,10 +36,24 @@ function App() {
   return (
     <div className={`min-h-screen transition-colors duration-700 ${mode === 'dev' ? 'bg-[#f4f4f5]' : 'bg-[#fafafa]'}`}>
       <CustomCursor />
-      <header className="fixed top-0 left-0 w-full z-50 bg-[#f4f4f5]/80 backdrop-blur-lg border-b border-black/5 px-6 py-4">
-        <div className="max-w-7xl mx-auto flex justify-end items-center gap-6">
-          <Navbar mode={mode} />
-          <ModeToggle mode={mode} setMode={setMode} />
+      <header className="fixed top-0 left-0 w-full z-50 px-6 py-4">
+        <div className="max-w-7xl mx-auto flex justify-between items-center gap-6">
+          {/* Logo */}
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="flex items-center cursor-pointer"
+          >
+            <img
+              src="https://i.postimg.cc/q4HsmLLR/Dev-LOGO.png"
+              alt="Dev Logo"
+              className="h-10 w-auto object-contain"
+            />
+          </button>
+          {/* Nav Links + Mode Toggle */}
+          <div className="flex items-center gap-6">
+            <Navbar mode={mode} />
+            <ModeToggle mode={mode} setMode={setMode} />
+          </div>
         </div>
       </header>
 
