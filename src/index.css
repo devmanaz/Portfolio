@@ -6,7 +6,7 @@ html {
 
 @layer base {
   body {
-    @apply bg-[#050505] text-white cursor-none;
+    @apply bg-[#e5e5e5] text-[#111111] cursor-none;
     font-family: 'Outfit', sans-serif;
   }
 
@@ -24,12 +24,12 @@ select {
 }
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 @theme {
   --color-dark: #050505;
-  --color-accent-cyan: #00f3ff;
-  --color-accent-purple: #bc13fe;
+  --color-accent-blue: #2563eb;
+  --color-accent-red: #dc2626;
   --color-accent-neon: #39ff14;
 }

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 const Footer = ({ mode }) => {
     return (
-        <footer id="contact" className="pt-24 pb-12 border-t border-white/5 scroll-mt-32">
+        <footer id="contact" className="pt-24 pb-12 border-t border-black/10 scroll-mt-32">
             <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-12">
                 {/* Left Side: Copy */}
                 <div className="space-y-6 max-w-2xl text-left">
@@ -15,7 +15,7 @@ const Footer = ({ mode }) => {
                     >
                         Let's work together
                     </motion.h4>
-                    <p className="text-gray-400 text-lg md:text-xl leading-relaxed max-w-md">
+                    <p className="text-gray-600 text-lg md:text-xl leading-relaxed max-w-md">
                         Whether you want to discuss a new project, a creative collaboration, or just talk tech—my inbox is always open.
                     </p>
                 </div>
@@ -27,7 +27,7 @@ const Footer = ({ mode }) => {
                             href="https://github.com/devmanaz"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent-cyan hover:text-black transition-all"
+                            className={`w-10 h-10 rounded-full bg-black/5 flex items-center justify-center ${mode === 'dev' ? 'hover:bg-accent-blue' : 'hover:bg-accent-red'} hover:text-white transition-all`}
                         >
                             <Github size={20} />
                         </a>
@@ -35,13 +35,13 @@ const Footer = ({ mode }) => {
                             href="https://www.linkedin.com/in/devamanas/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent-cyan hover:text-black transition-all"
+                            className={`w-10 h-10 rounded-full bg-black/5 flex items-center justify-center ${mode === 'dev' ? 'hover:bg-accent-blue' : 'hover:bg-accent-red'} hover:text-white transition-all`}
                         >
                             <Linkedin size={20} />
                         </a>
                         <a
                             href="mailto:devamanashere@gmail.com"
-                            className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent-cyan hover:text-black transition-all"
+                            className={`w-10 h-10 rounded-full bg-black/5 flex items-center justify-center ${mode === 'dev' ? 'hover:bg-accent-blue' : 'hover:bg-accent-red'} hover:text-white transition-all`}
                         >
                             <Mail size={20} />
                         </a>
@@ -51,7 +51,7 @@ const Footer = ({ mode }) => {
                         href="mailto:devamanashere@gmail.com"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="px-10 py-3 bg-white text-black font-bold rounded-full text-lg hover:bg-accent-cyan transition-all shadow-[0_0_30px_rgba(255,255,255,0.1)] whitespace-nowrap"
+                        className={`px-10 py-3 ${mode === 'dev' ? 'bg-black hover:bg-accent-blue' : 'bg-accent-red hover:bg-accent-red/90'} text-white font-bold rounded-full text-lg transition-all shadow-xl whitespace-nowrap`}
                     >
                         Contact Now
                     </motion.a>

@@ -34,12 +34,12 @@ const CustomCursor = () => {
 
     return (
         <motion.div
-            className="fixed top-0 left-0 w-8 h-8 rounded-full border border-accent-cyan/50 pointer-events-none z-[9999] hidden md:block"
+            className="fixed top-0 left-0 w-8 h-8 rounded-full border border-accent-blue/80 pointer-events-none z-[9999] hidden md:block"
             style={{
                 x: cursorX,
                 y: cursorY,
                 scale: isHovering ? 1.5 : 1,
-                backgroundColor: isHovering ? 'rgba(0, 243, 255, 0.1)' : 'transparent',
+                backgroundColor: isHovering ? 'rgba(37, 99, 235, 0.1)' : 'transparent',
             }}
             transition={{ type: 'spring', damping: 20, stiffness: 250 }}
         />

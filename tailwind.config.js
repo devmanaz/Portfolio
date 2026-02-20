@@ -9,8 +9,8 @@ export default {
             colors: {
                 dark: "#050505",
                 accent: {
-                    cyan: "#00f3ff",
-                    purple: "#bc13fe",
+                    blue: "#2563eb",
+                    red: "#dc2626",
                     neon: "#39ff14"
                 }
             }

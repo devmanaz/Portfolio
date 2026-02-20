@@ -2,12 +2,12 @@ import { Terminal, Camera } from 'lucide-react'
 
 const ModeToggle = ({ mode, setMode }) => {
     return (
-        <div className="flex bg-white/5 backdrop-blur-md p-0.5 rounded-full border border-white/10 shadow-2xl font-mono">
+        <div className="flex bg-black/5 backdrop-blur-md p-0.5 rounded-full border border-black/10 shadow-lg font-mono">
             <button
                 onClick={() => setMode('dev')}
                 className={`flex items-center gap-2 px-3 py-1.5 rounded-full transition-all ${mode === 'dev'
-                        ? 'bg-accent-cyan text-black font-bold'
-                        : 'text-gray-400 hover:text-white'
+                    ? 'bg-accent-blue text-white font-bold shadow-md'
+                    : 'text-gray-600 hover:text-black'
                     }`}
             >
                 <Terminal size={14} />
@@ -16,8 +16,8 @@ const ModeToggle = ({ mode, setMode }) => {
             <button
                 onClick={() => setMode('creative')}
                 className={`flex items-center gap-2 px-3 py-1.5 rounded-full transition-all ${mode === 'creative'
-                        ? 'bg-accent-purple text-white font-bold'
-                        : 'text-gray-400 hover:text-white'
+                    ? 'bg-accent-red text-white font-bold shadow-md'
+                    : 'text-gray-600 hover:text-black'
                     }`}
             >
                 <Camera size={14} />

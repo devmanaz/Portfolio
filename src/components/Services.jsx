@@ -1,21 +1,21 @@
 import { motion } from 'framer-motion'
 import { Camera, Video, Palette, Mail } from 'lucide-react'
 
-const Services = () => {
+const Services = ({ mode }) => {
     const services = [
         {
             title: 'Photography',
-            icon: <Camera className="text-accent-purple" size={32} />,
+            icon: <Camera className="text-accent-red" size={32} />,
             desc: 'Professional photography services including event coverage, portraits, and product shoots.'
         },
         {
             title: 'Videography',
-            icon: <Video className="text-accent-purple" size={32} />,
+            icon: <Video className={`${mode === 'dev' ? 'text-accent-blue' : 'text-accent-red'}`} size={32} />,
             desc: 'Cinematic video production, editing, and storytelling for brands and individuals.'
         },
         {
             title: 'Graphic Design',
-            icon: <Palette className="text-accent-purple" size={32} />,
+            icon: <Palette className={`${mode === 'dev' ? 'text-accent-blue' : 'text-accent-red'}`} size={32} />,
             desc: 'Creative visual designs, branding, and social media content creation.'
         }
     ]
@@ -37,11 +37,11 @@ const Services = () => {
                     <motion.div
                         key={service.title}
                         whileHover={{ y: -10 }}
-                        className="p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-accent-purple/50 transition-all"
+                        className="p-8 rounded-3xl bg-black/5 border border-black/5 hover:border-accent-red/50 transition-all"
                     >
                         <div className="mb-6">{service.icon}</div>
                         <h4 className="text-xl font-bold mb-4">{service.title}</h4>
-                        <p className="text-gray-400 text-sm leading-relaxed">{service.desc}</p>
+                        <p className="text-gray-600 text-sm leading-relaxed">{service.desc}</p>
                     </motion.div>
                 ))}
             </div>

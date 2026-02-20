@@ -23,7 +23,7 @@ const Navbar = ({ mode }) => {
                 <motion.li key={item.name} whileHover={{ y: -2 }}>
                     <a
                         href={item.href}
-                        className="text-white/70 hover:text-accent-cyan text-[10px] md:text-sm transition-colors tracking-widest uppercase whitespace-nowrap"
+                        className={`text-black/70 ${mode === 'dev' ? 'hover:text-accent-blue' : 'hover:text-accent-red'} text-[10px] md:text-sm transition-colors tracking-widest uppercase whitespace-nowrap`}
                     >
                         {item.name}
                     </a>

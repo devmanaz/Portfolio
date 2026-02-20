@@ -46,7 +46,7 @@ const Projects = ({ mode }) => {
                             ease: [0.215, 0.61, 0.355, 1]
                         }}
                         viewport={{ once: false, margin: "-50px" }}
-                        className="flex flex-col bg-[#0a1118] border border-white/5 rounded-[2rem] p-6 hover:border-accent-cyan/30 transition-all group"
+                        className={`flex flex-col bg-[#fcfcfc] border border-black/5 rounded-[2rem] p-6 ${mode === 'dev' ? 'hover:border-accent-blue/30' : 'hover:border-accent-red/30'} transition-all group shadow-sm hover:shadow-md`}
                     >
                         <h4 className="text-xl font-bold mb-4">{project.title}</h4>
 
@@ -59,26 +59,26 @@ const Projects = ({ mode }) => {
                         </div>
 
                         <div className="flex-1 space-y-4">
-                            <p className="text-gray-400 text-sm leading-relaxed min-h-[4rem]">
+                            <p className="text-gray-600 text-sm leading-relaxed min-h-[4rem]">
                                 {project.desc}
                             </p>
 
                             {project.status && (
-                                <p className="text-white text-sm font-semibold">
-                                    Status : <span className="font-normal text-gray-500">{project.status}</span>
+                                <p className="text-[#111111] text-sm font-semibold">
+                                    Status : <span className="font-normal text-gray-600">{project.status}</span>
                                 </p>
                             )}
 
                             <div className="flex gap-3 pt-2">
                                 <a
                                     href={project.live}
-                                    className="flex-1 py-2 px-4 border border-accent-cyan/50 text-white rounded-xl text-center text-sm font-medium hover:bg-accent-cyan hover:text-black transition-all"
+                                    className={`flex-1 py-2 px-4 border ${mode === 'dev' ? 'border-accent-blue hover:bg-accent-blue' : 'border-accent-red hover:bg-accent-red'} text-[#111111] rounded-xl text-center text-sm font-medium hover:text-white transition-all`}
                                 >
                                     Live
                                 </a>
                                 <a
                                     href={project.code}
-                                    className="flex-1 py-2 px-4 border border-accent-cyan/50 text-white rounded-xl text-center text-sm font-medium hover:bg-accent-cyan hover:text-black transition-all"
+                                    className={`flex-1 py-2 px-4 border ${mode === 'dev' ? 'border-accent-blue hover:bg-accent-blue' : 'border-accent-red hover:bg-accent-red'} text-[#111111] rounded-xl text-center text-sm font-medium hover:text-white transition-all`}
                                 >
                                     Code
                                 </a>

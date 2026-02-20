@@ -6,12 +6,12 @@ const Experience = () => {
             role: 'Chairperson',
             company: 'IEEE Computer Society RSET SBC',
             period: '2026 - Present',
-            desc: 'Directed an executive committee of 40 members, overseeing all strategic planning, event execution, and member relations',
+            desc: 'Directed an executive committee of 40 members, overseeing all strategic planning, event execution, and member relations.',
         },
         {
             role: 'Community Director',
             company: 'BRIK (NGO)',
-            period: '2023 - Present',
+            period: '2024 - Present',
             desc: 'Leading community initiatives and events. Mentoring students and driving creative outreach programs.',
         },
         {
@@ -32,7 +32,7 @@ const Experience = () => {
             period: '2023',
             desc: 'Developed social media strategies and managed content creation for global clients.',
         }
-        
+
     ]
 
     return (
@@ -62,15 +62,15 @@ const Experience = () => {
                         }}
                         className="space-y-6 group cursor-default"
                     >
-                        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-sm md:text-base font-mono border-b border-white/20 pb-4 transition-all duration-300 group-hover:border-white/40">
-                            <span className="w-48 text-gray-400 group-hover:text-white transition-all duration-300">{exp.period}</span>
-                            <span className="flex-1 text-white uppercase tracking-wider group-hover:font-bold transition-all duration-300">{exp.role}</span>
-                            <span className="text-gray-400 uppercase tracking-widest flex items-center gap-2 group-hover:text-white transition-all duration-300">
-                                <span className="h-4 w-[1px] bg-white/20 hidden md:block group-hover:bg-white/40"></span>
+                        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-sm md:text-base font-mono border-b border-black/10 pb-4 transition-all duration-300 group-hover:border-black/30">
+                            <span className="w-48 text-gray-500 group-hover:text-black transition-all duration-300">{exp.period}</span>
+                            <span className="flex-1 text-black uppercase tracking-wider group-hover:font-bold transition-all duration-300">{exp.role}</span>
+                            <span className="text-gray-500 uppercase tracking-widest flex items-center gap-2 group-hover:text-black transition-all duration-300">
+                                <span className="h-4 w-[1px] bg-black/10 hidden md:block group-hover:bg-black/30"></span>
                                 {exp.company}
                             </span>
                         </div>
-                        <p className="text-base md:text-lg leading-relaxed max-w-5xl text-gray-400 group-hover:text-white/90 transition-all duration-300">
+                        <p className="text-base md:text-lg leading-relaxed max-w-5xl text-gray-600 group-hover:text-black/90 transition-all duration-300">
                             {exp.desc}
                         </p>
                     </motion.div>

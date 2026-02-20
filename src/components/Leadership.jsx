@@ -14,7 +14,7 @@ const Leadership = ({ mode }) => {
                     viewport={{ once: false }}
                     className="relative"
                 >
-                    <h2 className="text-5xl md:text-7xl font-['Ms_Madi'] text-white select-none">
+                    <h2 className="text-5xl md:text-7xl font-['Ms_Madi'] text-black select-none">
                         Devamanas S
                     </h2>
                 </motion.div>
@@ -30,7 +30,7 @@ const Leadership = ({ mode }) => {
                         href="#"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="px-12 py-4 bg-white text-black font-bold rounded-full text-xl shadow-2xl hover:bg-white/90 transition-all flex items-center gap-2"
+                        className={`px-12 py-4 ${mode === 'dev' ? 'bg-black' : 'bg-accent-red'} text-white font-bold rounded-full text-xl shadow-2xl ${mode === 'dev' ? 'hover:bg-black/90' : 'hover:bg-accent-red/90'} transition-all flex items-center gap-2`}
                     >
                         Download Resume
                     </motion.a>
@@ -42,7 +42,7 @@ const Leadership = ({ mode }) => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: false }}
                     transition={{ delay: 0.4 }}
-                    className="text-gray-400 text-lg md:text-xl max-w-3xl leading-relaxed font-medium"
+                    className="text-gray-600 text-lg md:text-xl max-w-3xl leading-relaxed font-medium"
                 >
                     Computer Science student & innovator driven by an end-to-end approach where design, functionality, and strategy align.
                     Dedicated to building digital solutions that drive engagement, scalability, and tangible impact.

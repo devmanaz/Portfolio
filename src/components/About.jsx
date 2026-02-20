@@ -29,16 +29,16 @@ const About = () => {
                     }}
                 >
                     <div className="space-y-6">
-                        <p className="text-gray-400 text-lg md:text-xl leading-relaxed">
+                        <p className="text-gray-600 text-lg md:text-xl leading-relaxed">
                             I am a Computer Science student who is passionate about building innovative solutions to daily problems. While I am skilled in marketing and persuasion, communication is another strength I possess. Idea pitching and designing are my other talents.
                         </p>
-                        <p className="text-gray-400 text-lg md:text-xl leading-relaxed">
+                        <p className="text-gray-600 text-lg md:text-xl leading-relaxed">
                             I have designed websites for various personal as well as social causes and even for organizations like NSS and IEEE. I am currently working on a project which can bring a huge positive change in the healthcare industry.
                         </p>
-                        <p className="text-gray-400 text-lg md:text-xl leading-relaxed">
+                        <p className="text-gray-600 text-lg md:text-xl leading-relaxed">
                             Cybersecurity enthusiast exploring ethical hacking, network security, and digital threat defense. Eager to learn and grow in the cyber world.
                         </p>
-                        <p className="text-gray-400 text-lg md:text-xl leading-relaxed">
+                        <p className="text-gray-600 text-lg md:text-xl leading-relaxed">
                             I follow an end-to-end development approach where design, functionality, and strategy align to drive engagement, scalability, and tangible business results.
                         </p>
                     </div>
