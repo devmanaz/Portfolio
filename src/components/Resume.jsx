@@ -16,14 +16,14 @@ const Resume = () => {
     }
 
     return (
-        <section id="resume" className="scroll-mt-32 py-6">
+        <section id="resume" className="scroll-mt-24 mt-16 md:mt-24 py-4 md:py-6">
             <div className="max-w-4xl mx-auto flex flex-col items-center text-center space-y-4">
                 {/* Signature Name */}
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: false }}
-                    className="text-5xl md:text-7xl font-['Ms_Madi'] text-black"
+                    className="text-4xl sm:text-5xl md:text-7xl font-['Ms_Madi'] text-black"
                 >
                     Devamanas S
                 </motion.h2>
@@ -36,7 +36,7 @@ const Resume = () => {
                 >
                     <button
                         onClick={handleDownload}
-                        className="px-12 py-5 bg-black text-white text-xl font-bold rounded-full shadow-xl hover:shadow-2xl hover:scale-105 active:scale-95 transition-all cursor-pointer"
+                        className="px-8 md:px-12 py-4 md:py-5 bg-black text-white text-lg md:text-xl font-bold rounded-full shadow-xl hover:shadow-2xl hover:scale-105 active:scale-95 transition-all cursor-pointer"
                     >
                         Download Resume
                     </button>

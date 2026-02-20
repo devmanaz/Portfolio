@@ -30,7 +30,7 @@ const Skills = ({ mode }) => {
                     Toolbox
                 </motion.h3>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[120px]">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 auto-rows-[100px] md:auto-rows-[120px]">
                 {skills.map((skill, index) => (
                     <motion.div
                         key={skill.title}

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 const Footer = ({ mode }) => {
     return (
-        <footer id="contact" className="pt-24 pb-12 border-t border-black/10 scroll-mt-32">
+        <footer id="contact" className="pt-12 md:pt-24 pb-12 border-t border-black/10 scroll-mt-24">
             <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-12">
                 {/* Left Side: Copy */}
                 <div className="space-y-6 max-w-2xl text-left">
@@ -11,7 +11,7 @@ const Footer = ({ mode }) => {
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: false }}
-                        className="text-3xl md:text-5xl font-bold tracking-tight"
+                        className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight"
                     >
                         Let's work together
                     </motion.h4>
